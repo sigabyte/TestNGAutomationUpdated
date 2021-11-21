@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="13272" started-at="2021-11-21T23:54:44Z" finished-at="2021-11-21T23:54:57Z">
+    <groups>
+      <group name="Navigation">
+        <method signature="SauceNavigationTest.verifyUserCanNavigateToProductDetailPageFromHomePage()[pri:0, instance:com.automation.test.SauceNavigationTest@6dbb137d]" name="verifyUserCanNavigateToProductDetailPageFromHomePage" class="com.automation.test.SauceNavigationTest"/>
+      </group> <!-- Navigation -->
+      <group name="Smoke">
+        <method signature="SauceNavigationTest.verifyUserCanNavigateToProductDetailPageFromHomePage()[pri:0, instance:com.automation.test.SauceNavigationTest@6dbb137d]" name="verifyUserCanNavigateToProductDetailPageFromHomePage" class="com.automation.test.SauceNavigationTest"/>
+      </group> <!-- Smoke -->
+      <group name="Chirag">
+        <method signature="SauceNavigationTest.verifyUserCanNavigateToProductDetailPageFromHomePage()[pri:0, instance:com.automation.test.SauceNavigationTest@6dbb137d]" name="verifyUserCanNavigateToProductDetailPageFromHomePage" class="com.automation.test.SauceNavigationTest"/>
+      </group> <!-- Chirag -->
+    </groups>
+    <test name="Default test" duration-ms="13272" started-at="2021-11-21T23:54:44Z" finished-at="2021-11-21T23:54:57Z">
+      <class name="com.automation.test.SauceNavigationTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.automation.test.SauceNavigationTest@6dbb137d]" name="setUp" is-config="true" duration-ms="9866" started-at="2021-11-21T23:54:44Z" finished-at="2021-11-21T23:54:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyUserCanNavigateToProductDetailPageFromHomePage()[pri:0, instance:com.automation.test.SauceNavigationTest@6dbb137d]" name="verifyUserCanNavigateToProductDetailPageFromHomePage" duration-ms="3357" started-at="2021-11-21T23:54:54Z" finished-at="2021-11-21T23:54:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserCanNavigateToProductDetailPageFromHomePage -->
+      </class> <!-- com.automation.test.SauceNavigationTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
