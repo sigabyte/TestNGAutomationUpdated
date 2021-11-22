@@ -4,9 +4,9 @@ package com.automation.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;;
 
-public class SauceLoginPage {
+
+public class SauceLoginPage extends BasePage {
 
 	@FindBy(id = "user-name")
 	WebElement userNameInput;
@@ -15,14 +15,11 @@ public class SauceLoginPage {
 	WebElement passwordInput;
 
 	@FindBy(id = "login-button")
-	WebElement loginBtn;
-
-	WebDriver driver;
+	WebElement loginBtn;	
 
 	public SauceLoginPage(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-
+		super(driver);
+		
 	}
 
 	public void LoginAction() {

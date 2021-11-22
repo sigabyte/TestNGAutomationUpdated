@@ -1,30 +1,10 @@
 package com.automation.test;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.automation.pages.SauceHomePage;
 import com.automation.pages.SauceLoginPage;
 
-public class SauceLoginTest {
-
-	WebDriver driver;
-
-	@BeforeMethod
-	public void setUp() {
-		// Open browser
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
-
-		// Maximize
-		driver.manage().window().maximize();
-
-		// Loading url in the browser
-		driver.get("https://www.saucedemo.com/");
-	}
+public class SauceLoginTest extends BaseTest {
 
 	@Test(groups = { "Smoke", "Cigabyte", "Login" })
 	public void verifyUserCanAbleToLogin() {
@@ -35,11 +15,6 @@ public class SauceLoginTest {
 		// Home Page
 		SauceHomePage homePage = new SauceHomePage(driver);
 		homePage.verifyUserCanEnterHomePage();
-	}
-
-	@AfterMethod
-	public void cleanUp() {
-		driver.close();
 	}
 
 }

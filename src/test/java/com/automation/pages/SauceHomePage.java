@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SauceHomePage {
+public class SauceHomePage extends BasePage {
 
 	@FindBy(xpath = "//div[text()='Sauce Labs Backpack']")
 	WebElement homePageItemName;
@@ -16,12 +16,8 @@ public class SauceHomePage {
 	@FindBy(xpath = "//div[@class='inventory_item_name']")
 	List<WebElement> ListOfItems;
 
-	WebDriver driver;
-
 	public SauceHomePage(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-
+		super(driver);
 	}
 
 	public void verifyUserCanEnterHomePage() {
@@ -31,6 +27,7 @@ public class SauceHomePage {
 	}
 
 	public void verifyProductDetailPageNavigation() {
+		
 
 		SauceProductPage pdpnav = new SauceProductPage(driver);
 
