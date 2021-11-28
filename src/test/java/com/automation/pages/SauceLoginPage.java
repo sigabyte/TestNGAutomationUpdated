@@ -24,7 +24,7 @@ public class SauceLoginPage extends BasePage {
 	}
 
 	public void LoginAction(String username, String password) {
-		// Login Page
+		waitForElementToBeClickable(userNameInput, driver);
 		userNameInput.sendKeys(username);
 		passwordInput.sendKeys(password);
 		loginBtn.click();

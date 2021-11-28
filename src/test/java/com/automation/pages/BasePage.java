@@ -3,7 +3,9 @@ package com.automation.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-public class BasePage {
+import com.automation.utils.CommonMethods;
+
+public class BasePage extends CommonMethods {
 	
 	WebDriver driver;
 	

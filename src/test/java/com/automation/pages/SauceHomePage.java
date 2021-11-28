@@ -24,6 +24,7 @@ public class SauceHomePage extends BasePage {
 		// HomePage
 
 		System.out.println(homePageItemName.isDisplayed());
+		switchToNewWindow(driver);
 	}
 
 	public void verifyProductDetailPageNavigation() {

@@ -11,9 +11,10 @@ public class SauceNavigationTest extends BaseTest {
 	public void verifyUserCanNavigateToProductDetailPageFromHomePage() {
 		// Login Page
 		SauceLoginPage loginPage = new SauceLoginPage(driver);
-		loginPage.LoginAction(PropertyReader.getProperty("login.username"), PropertyReader.getProperty("secret_sauce"));
-
 		SauceHomePage homePage = new SauceHomePage(driver);
+		
+		loginPage.LoginAction(PropertyReader.getProperty("login.username"), PropertyReader.getProperty("secret_sauce"));
+		homePage.verifyUserCanEnterHomePage();
 		homePage.verifyProductDetailPageNavigation();
 
 	}
