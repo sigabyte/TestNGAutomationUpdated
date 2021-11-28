@@ -5,9 +5,9 @@
     <classes>
       <class name="com.automation.test.SauceLoginTest">
         <methods>
-          <include name="verifyUserCanAbleToLogin"/>
           <include name="cleanUp"/>
           <include name="setUp"/>
+          <include name="verifyUserCannotDoLogin"/>
         </methods>
       </class> <!-- com.automation.test.SauceLoginTest -->
     </classes>

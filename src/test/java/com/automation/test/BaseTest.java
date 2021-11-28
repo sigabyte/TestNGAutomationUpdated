@@ -1,9 +1,11 @@
 package com.automation.test;
 
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import com.automation.utils.PropertyReader;
 
 public class BaseTest {
 	
@@ -14,12 +16,17 @@ public class BaseTest {
 		// Open browser
 		System.setProperty("webdriver.chrome.driver", "src//test//resources//driver//chromedriver.exe");
 		driver = new ChromeDriver();
+		
+		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 
 		// Maximize
 		driver.manage().window().maximize();
-
+		
+		PropertyReader.initProperties();
+				
 		// Loading url in the browser
-		driver.get("https://www.saucedemo.com/");
+		driver.get(PropertyReader.getProperty("application.url"));
+		
 	}
 
 	@AfterMethod
